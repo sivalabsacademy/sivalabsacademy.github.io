@@ -1,0 +1,34 @@
+<footer class="footer text-center">
+	<div class="container">
+		<div class="row">
+			<!-- Footer Location-->
+			<div class="col-lg-4 mb-5 mb-lg-0">
+				<h4 class="text-uppercase mb-4">Location</h4>
+				<p class="lead mb-0">
+					{{ .Site.Params.Location.lineone }}
+					<br />
+					{{ .Site.Params.Location.linetwo }}
+				</p>
+			</div>
+			<!-- Footer Social Icons-->
+			<div class="col-lg-4 mb-5 mb-lg-0">
+				<h4 class="text-uppercase mb-4">Around the Web</h4>
+				{{ range .Site.Params.Social }}
+				<a class="btn btn-outline-light btn-social mx-1" href="{{.url}}"
+				target="_blank"><em class="{{.icon_pack}} fa-fw fa-{{.icon}}"></em></a>
+			  	{{end}}
+			</div>
+			<!-- Footer About Text-->
+			<div class="col-lg-4">
+				<h4 class="text-uppercase mb-4">About SivaLabs Academy</h4>
+				<p class="lead mb-0">
+					SivaLabs Academy is created by <a href="https://sivalabs.in">Siva</a>
+					to teach technology with real-world hands-on experience.
+				</p>
+			</div>
+		</div>
+	</div>
+</footer>
+<div class="copyright py-4 text-center text-white">
+	<div class="container"><small>Copyright &copy; {{ .Site.Title }} {{ now.Format "2006" }}</small></div>
+</div>
